@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-my-adress-book',
@@ -8,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class MyAdressBookComponent implements OnInit {
 table:any;
 search='';
-  constructor() { }
+test=true;
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.table=[{name:'hatem shili',phone:'26664593'},
@@ -18,6 +20,11 @@ search='';
     {name:'shili shili',phone:'26664593'},
     {name:'hatem shili',phone:'26664593'}
   ];
+  }
+  contactBook(){
+    this.test=false;
+    console.log(this.table);
+    
   }
 
 }

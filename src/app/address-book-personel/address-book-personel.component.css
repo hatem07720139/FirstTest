@@ -1,0 +1,14 @@
+.cardTp {
+    background-color: #ddd;
+    width: 400px;
+    height: 200px;
+    border-top: 20px solid rgb(207, 48, 0);
+    padding: 30px;
+    margin-left: 50%;
+    margin-top: 40px;
+}
+
+h1 {
+    margin-top: 40px;
+    text-align: center;
+}

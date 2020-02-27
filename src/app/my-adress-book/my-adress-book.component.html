@@ -1,5 +1,5 @@
 <h1 class="text-light">My Address Book</h1>
-<div class="input-group flex-nowrap">
+<div class="input-group flex-nowrap" *ngIf='test'>
     <div class="input-group-prepend">
         <div class="card cardTT">
             <div class="row">
@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-md-3 card cardP" *ngFor='let contact of (table |newpippe:search)'>
+                <div class="col-md-3 card cardP" (click)='contactBook()' *ngFor='let contact of (table |newpippe:search)'>
                     <div class="row">
                         <div class="col-md-3">
                             <img src="../../assets/profile.png" class="profile">
@@ -26,6 +26,24 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="input-group flex-nowrap" *ngIf='!test'>
+    <div class="input-group-prepend">
+        <div class="card cardTp">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="../../assets/profile.png" class="profile">
+                </div>
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-7">
+                    <p class="text-uppercase text-secondary sizeP mt-3"> {{contact.name}}</p>
+                    <p class="text-secondary sizeP"> {{contact.phone}}</p>
                 </div>
             </div>
         </div>

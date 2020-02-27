@@ -1,0 +1,33 @@
+<h1 class="text-light">My Address Book</h1>
+<div class="input-group flex-nowrap">
+    <div class="input-group-prepend">
+        <div class="card cardTT">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="search">
+                    </div>
+                    <p class="text-danger alpha">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-3 card cardP" *ngFor='let contact of (table |newpippe:search)'>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="../../assets/profile.png" class="profile">
+                        </div>
+                        <div class="col-md-2">
+
+                        </div>
+                        <div class="col-md-7">
+                            <p class="text-uppercase text-secondary sizeP mt-3"> {{contact.name}}</p>
+                            <p class="text-secondary sizeP"> {{contact.phone}}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
